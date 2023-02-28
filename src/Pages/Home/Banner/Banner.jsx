@@ -3,7 +3,7 @@ import React from "react";
 const Banner = () => {
   return (
     <div className=" bg-gradient-to-t from-white via-emerald-200 to-blue-300 lg:pb-0 xs:pb-16 xs:pt-10 lg:pt-0 flex items-center  lg:h-[100vh]">
-      <div className="container mx-auto ">
+      <div className="max-w-[1250px] px-4 mx-auto ">
         <div className="grid grid-cols-12 gap-7 mt-16">
           <div className="lg:col-span-6 xs:col-span-12">
             <div className="card  bg-base-100 shadow-xl">
