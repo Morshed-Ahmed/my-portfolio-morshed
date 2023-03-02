@@ -21,7 +21,10 @@ import { SiNetlify } from "react-icons/si";
 import { RxVercelLogo } from "react-icons/rx";
 import { FaFigma } from "react-icons/fa";
 import { TbCode } from "react-icons/tb";
-// import { VscCode } from "react-icons/vs";
+import { IoLogoTwitter } from "react-icons/io";
+import { BsArrowRightCircle } from "react-icons/bs";
+import { ImProfile } from "react-icons/im";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const skills = [
@@ -137,7 +140,7 @@ const About = () => {
         <Navbar />
       </div>
       <div className="max-w-[1250px] xs:px-4 lg:px-0 mx-auto">
-        <div className=" flex items-center    h-[100vh]">
+        <div className=" flex items-center   h-[100vh]">
           <div className="flex lg:flex-row xs:flex-col gap-10 w-full">
             <div className="bg-gradient-to-tl from-white via-emerald-200 to-blue-300 lg:w-[80%] xs:w-[100%]  lg:h-[300px] xs:h-[200px]   flex justify-center  rounded-2xl">
               <img
@@ -157,7 +160,33 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="mb-10">
+        {/* <div className="flex justify-center gap-4 lg:flex-row xs:flex-col">
+          <button className="btn btn-active btn-ghost gap-1">
+            Twitter
+            <img
+              className="w-5"
+              src="https://i.ibb.co/yP0p9KR/161-trending-flat-outline-1.gif"
+              alt=""
+            />
+          </button>
+          <button className="btn btn-active btn-ghost gap-1">
+            Instagram
+            <img
+              className="w-5"
+              src="https://i.ibb.co/yP0p9KR/161-trending-flat-outline-1.gif"
+              alt=""
+            />
+          </button>
+          <button className="btn btn-active btn-ghost gap-1">
+            Read.cv
+            <img
+              className="w-5"
+              src="https://i.ibb.co/yP0p9KR/161-trending-flat-outline-1.gif"
+              alt=""
+            />
+          </button>
+        </div> */}
+        <div className="my-10">
           <div className="grid grid-cols-12 gap-7">
             <div className="lg:col-span-6 xs:col-span-12">
               <div className="card bg-base-100 shadow-xl">
@@ -214,6 +243,72 @@ const About = () => {
                           </div>
                         </div>
                       ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="my-16">
+          <div className="grid grid-cols-12 gap-7">
+            <div className="lg:col-span-3 xs:col-span-12">
+              <div className="card h-full bg-base-100 shadow-xl">
+                <div className="card-body flex  ">
+                  <div className=" flex justify-center ">
+                    <div className="flex justify-center">
+                      <IoLogoTwitter size={90} color={"#6C63FF"} />
+                    </div>
+                  </div>
+
+                  <div className=" flex  justify-end items-end w-full h-full">
+                    <BsArrowRightCircle
+                      size={25}
+                      className="hover:text-[#6C63FF] text-[#676767]"
+                      // color={"#676767"}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-6 xs:col-span-12 ">
+              <Link to={"/contact"}>
+                <div className="card  bg-base-100 shadow-xl">
+                  <div className="card-body h-[250px] ">
+                    <div className="flex flex-col h-full justify-end">
+                      <h2 className="card-title text-2xl font-semibold">
+                        Let's work together ✨
+                      </h2>
+                      <div className="flex justify-between items-end">
+                        <h1 className="lg:text-5xl xs:text-3xl font-bold text-[#6C63FF]">
+                          Get in touch now
+                        </h1>
+                        <BsArrowRightCircle
+                          size={25}
+                          className="hover:text-[#6C63FF] text-[#676767]"
+                          // color={"#676767"}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className="lg:col-span-3 xs:col-span-12">
+              <div className="card h-full bg-base-100 shadow-xl">
+                <div className="card-body">
+                  <div className="flex justify-center">
+                    <ImProfile size={70} color={"#6C63FF"} />
+                  </div>
+                  <div>
+                    <h1 className="text-xl">LEARN MORE ABOUT ME</h1>
+                    <div className="flex justify-between items-end">
+                      <h1 className="text-3xl font-bold">See my resume</h1>
+                      <BsArrowRightCircle
+                        size={25}
+                        className="hover:text-[#6C63FF] text-[#676767]"
+                        // color={"#676767"}
+                      />
                     </div>
                   </div>
                 </div>
