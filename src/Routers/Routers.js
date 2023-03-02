@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home/Home/Home";
 import Navbar from "../Pages/Navbar/Navbar";
+import About from "../Pages/RoutePages/About/About";
+import Blogs from "../Pages/RoutePages/Blogs/Blogs";
+import Projects from "../Pages/RoutePages/Projects/Projects";
 
 const router = createBrowserRouter([
   {
@@ -9,98 +12,15 @@ const router = createBrowserRouter([
   },
   {
     path: "work",
-    element: (
-      <div>
-        <Navbar />
-        <h1>Work</h1>
-      </div>
-    ),
+    element: <Projects />,
   },
   {
     path: "about",
-    element: (
-      <div className=" bg-gradient-to-t from-violet-50 to-pink-200">
-        <Navbar />
-
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus!
-        </h1>
-        <h1>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis atque
-          optio hic architecto error illo odit cumque voluptate a laboriosam
-          iste, repellendus dolor fugit veritatis quos ab aperiam consectetur
-          natus! atque optio hic architecto error illo odit cumque voluptate a
-          laboriosam iste, repellendus dolor fugit veritatis quos ab aperiam
-          consectetur natus!
-        </h1>
-      </div>
-    ),
+    element: <About />,
   },
   {
     path: "blog",
-    element: (
-      <div>
-        <Navbar />
-        <h1>Blogs</h1>
-      </div>
-    ),
+    element: <Blogs />,
   },
 ]);
 
