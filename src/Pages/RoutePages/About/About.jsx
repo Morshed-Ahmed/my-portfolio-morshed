@@ -25,6 +25,7 @@ import { IoLogoTwitter } from "react-icons/io";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { ImProfile } from "react-icons/im";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const About = () => {
   const skills = [
@@ -139,8 +140,13 @@ const About = () => {
       <div>
         <Navbar />
       </div>
-      <div className="max-w-[1250px] xs:px-4 lg:px-0 mx-auto">
-        <div className=" flex items-center   h-[100vh]">
+      <div className="max-w-[1250px] xs:px-4 lg:px-0 mt-24 mx-auto">
+        <div className="mb-5">
+          <h1 className="text-center text-[#EDECE8] lg:text-[16rem] xs:text-[4rem] font-semibold tracking-wide">
+            About Me
+          </h1>
+        </div>
+        <div className="">
           <div className="flex lg:flex-row xs:flex-col gap-10 w-full">
             <div className="bg-gradient-to-tl from-white via-emerald-200 to-blue-300 lg:w-[80%] xs:w-[100%]  lg:h-[300px] xs:h-[200px]   flex justify-center  rounded-2xl">
               <img
@@ -232,15 +238,26 @@ const About = () => {
                   </p>
 
                   <div className="mt-5">
-                    <div className="grid grid-cols-12 gap-2 ">
+                    <div className="grid grid-cols-12 gap-3 ">
                       {skills.map((skill) => (
-                        <div className="lg:col-span-4 xs:col-span-6">
-                          <div className="border-2 px-3 py-2 rounded-lg flex justify-center items-center gap-2 ">
+                        <div
+                          key={skill.id}
+                          className="lg:col-span-4 xs:col-span-6"
+                        >
+                          <motion.div
+                            whileHover={{
+                              scale: 1.1,
+                              color: "#6C63FF",
+                              borderColor: "#6C63FF",
+                            }}
+                            whileTap={{ scale: 0.8 }}
+                            className="border-2 px-3 py-2 rounded-lg flex justify-center items-center gap-2 "
+                          >
                             {skill?.icon}
                             <h1 className="text-base font-bold">
                               {skill?.title}
                             </h1>
-                          </div>
+                          </motion.div>
                         </div>
                       ))}
                     </div>
