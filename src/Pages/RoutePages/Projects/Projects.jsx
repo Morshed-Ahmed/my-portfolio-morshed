@@ -1,35 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { ProjectContext } from "../../../Context/ProjectData";
 import Navbar from "../../Navbar/Navbar";
 import ProjectCard from "./ProjectCard";
+import ProjectModal from "./ProjectDetails/ProjectModal";
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      bgImg: "https://i.ibb.co/85F0rS7/job-potal.png",
-      category: "Web App",
-      title: "Job Portal Website",
-    },
-    {
-      id: 2,
-      bgImg:
-        "https://i.ibb.co/nBCK16y/screenshot-learn-hive-website-vercel-app-2023-02-28-10-59-07.png",
-      category: "Web App",
-      title: "Online Learn Hive Website",
-    },
-    {
-      id: 3,
-      bgImg: "https://i.ibb.co/z2CgLJY/healthcare.png",
-      category: "Web App",
-      title: "Healthcare Website",
-    },
-    {
-      id: 4,
-      bgImg: "https://i.ibb.co/z2CgLJY/healthcare.png",
-      category: "Web App",
-      title: "Healthcare Website",
-    },
-  ];
+  const [projectDte, setProjectDte] = useState(null);
+
+  const { projects } = useContext(ProjectContext);
+
   return (
     <div>
       <div>
@@ -41,10 +20,16 @@ const Projects = () => {
             All Works
           </h1>
         </div>
+
         <div className="flex flex-col gap-8">
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              setProjectDte={setProjectDte}
+              project={project}
+            />
           ))}
+          <ProjectModal projectDte={projectDte}></ProjectModal>
         </div>
       </div>
     </div>
